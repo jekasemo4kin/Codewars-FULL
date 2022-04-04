@@ -12,10 +12,12 @@ Note: There are 5 missiles labeled i which is a number in {0, 1, 2, 3, 4}. The m
 ---
 ```javascript
 
-const calculate=(...x)=>(...y)=> {
-    return [].concat(x,y).reduce((a,b)=>a+b,0)
-  };
- 
-
+function launchAll(launchMissile) {
+  for(let i = 0; i < 5; i++) {
+    setTimeout(function() {
+      launchMissile(i);
+    }, i * 1000);
+  }
+}
 
 ```
